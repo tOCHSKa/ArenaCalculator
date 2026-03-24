@@ -41,3 +41,14 @@ document.getElementById('refresh').addEventListener('click', function() {
     document.getElementById('r3').value = '';
     document.getElementById('r5').value = '';
 });
+
+
+function handleInput(el) {
+  // limite à 4 caractères
+  if (el.value.length > 4) {
+    el.value = el.value.slice(0, 4);
+  }
+
+  // ton calcul
+  calc();
+}
