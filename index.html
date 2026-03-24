@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Calculator</title>
+    <link rel="stylesheet" href="./style/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-body">
+    <div class="p-4 max-w-4xl mx-auto bg-[#202020] bg-dark-overlay rounded-xl" style="border-style: ridge; border-color: #332C17; border-width: 6px;">
+        <div class="border-t-2 border-b-2 border-[#EEBF5F] p-4">
+            <h1 class="morpheus text-4xl font-semibold tracking-widest text-[#EEBF5F] text-center p-2 text-shadow-wow">
+                Arena Points Calculator
+            </h1>
+            <h2 class="text-center text-xl text-[#6A6142] ArialN text-shadow-lg tracking-wide">Saison 1</h2>
+            <h2 class="text-center text-xl text-[#6EA66F] ArialN text-shadow-lg">* Live data: 3 bracket(s) loaded</h2>
+        </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 mb-[5rem]">
+            
+            <div class=" p-4 px-5 rounded-xl text-center">
+                <div class="border-b-4 border-[#DA6D2F]">
+                    <h2 class=" morpheus text-[#DA6D2F] font-bold text-3xl tracking-wider text-shadow-wow">2v2</h2>
+                    <p class="text-xl text-gray-400 mb-2 ArialN text-shadow-md">x0.76</p>
+                </div>
+                <div class="mt-2">
+                    <p class="text-2xl text-gray-400 mb-2 ArialN text-shadow-md">RATING</p>
+                </div>
+                <input type="text" id="r2" placeholder="0" oninput="calc()"
+                class="border-5 border-[#828382] rounded-lg text-center px-2 py-1 text-[#D7C793] text-2xl w-2/3 bg-dark-overlay" style="border-style: ridge;">
+                <div class="mt-4 border-1 rounded border-[#DA6D2F] w-2/3 mx-auto p-6 bg-dark-overlay relative h-24">
+                    <span id="res2" class="absolute bottom-10 left-[50%] translate-x-[-50%] morpheus tracking-widest text-shadow-wow text-[#DA6D2F] text-4xl">0</span>
+                    <span class="absolute bottom-0 left-[50%] translate-x-[-50%] text-2xl ArialN text-shadow-lg tracking-wide text-[#6A6142]">PTS/WEEK</span>
+                </div>
+            </div>
+            <div class=" p-4 px-5 rounded-xl text-center">
+                <div class="border-b-4 border-[#2780B2]">
+                    <h2 class=" morpheus text-[#2780B2] font-bold text-3xl tracking-wider text-shadow-wow">3v3</h2>
+                    <p class="text-xl text-gray-400 mb-2 ArialN text-shadow-md">x0.88</p>
+                </div>
+                <div class="mt-2">
+                    <p class="text-2xl text-gray-400 mb-2 ArialN text-shadow-md">RATING</p>
+                </div>
+                <input type="text" id="r3" placeholder="0" oninput="calc()"
+                class="border-5 border-[#828382] rounded-lg text-center px-2 py-1 text-[#D7C793] text-2xl w-2/3 bg-dark-overlay" style="border-style: ridge;">
+                <div class="mt-4 border-1 rounded border-[#2780B2] w-2/3 mx-auto p-6 bg-dark-overlay relative h-24">
+                    <span id="res3" class="absolute bottom-10 left-[50%] translate-x-[-50%] morpheus tracking-widest text-shadow-wow text-[#2780B2] text-4xl">0</span>
+                    <span class="absolute bottom-0 left-[50%] translate-x-[-50%] text-2xl ArialN text-shadow-lg tracking-wide text-[#6A6142]">PTS/WEEK</span>
+                </div>
+            </div>
+            <div class=" p-4 px-5 rounded-xl text-center">
+                <div class="border-b-4 border-[#5BBA5B]">
+                    <h2 class=" morpheus text-[#5BBA5B] font-bold text-3xl tracking-wider text-shadow-wow">5v5</h2>
+                    <p class="text-xl text-gray-400 mb-2 ArialN text-shadow-md">x1.00</p>
+                </div>
+                <div class="mt-2">
+                    <p class="text-2xl text-gray-400 mb-2 ArialN text-shadow-md">RATING</p>
+                </div>
+                <input type="text" id="r5" placeholder="0" oninput="calc()"
+                class="border-5 border-[#828382] rounded-lg text-center px-2 py-1 text-[#D7C793] text-2xl w-2/3 bg-dark-overlay" style="border-style: ridge;">
+                <div class="mt-4 border-1 rounded border-[#5BBA5B] w-2/3 mx-auto p-6 bg-dark-overlay relative h-24">
+                    <span id="res5" class="absolute bottom-10 left-[50%] translate-x-[-50%] morpheus tracking-widest text-shadow-wow text-[#5BBA5B] text-4xl">0</span>
+                    <span class="absolute bottom-0 left-[50%] translate-x-[-50%] text-2xl ArialN text-shadow-lg tracking-wide text-[#6A6142]">PTS/WEEK</span>
+                </div>
+            </div>
+            </div>
+
+        <div class="footer border-t-2 border-[#EEBF5F] p-4">
+            <div class="flex">
+                <p class=" text-2xl ArialN text-shadow-md text-[#6A6142]">
+                    YOU RECEIVE:
+                    <span class="ml-4 best morpheus tracking-widest text-shadow-wow text-[#EEBF5F] text-3xl" id="best">0</span>
+                </p>
+                <button id="refresh"
+                class="ml-auto px-5 py-0 text-2xl font-bold text-[#EEBF5F] ArialN text-shadow-wow-small cursor-pointer
+                rounded-lg border-2 border-[#828382]
+                bg-gradient-to-b from-[#8b0a0a] to-[#3a0000]
+                shadow-[inset_0_2px_2px_rgba(255,255,255,0.3),inset_0_-3px_5px_rgba(0,0,0,0.8),0_3px_6px_rgba(0,0,0,0.6)]
+                hover:brightness-110 active:translate-y-[2px] active:shadow-[inset_0_4px_6px_rgba(0,0,0,0.9)]"
+                >
+                Refresh
+                </button>
+            </div>
+            <div class="ArialN text-shadow-md text-[#6A6142] text-xl">
+                <p>* best from <span id="bracket"> </span> bracket</p>
+                <p>Click pts box or total to reverse-calculate</p>
+            </div>
+        </div>
+        <div class="flex ArialN text-shadow-md text-[#6A6142] text-xl justify-end">
+            <p>10+ games required</p>
+        </div>
+</div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+@font-face {
+  font-family: 'ArialN';
+  src: url('../fonts/ARIALN.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Morpheus';
+  src: url('../fonts/MORPHEUS.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Skurri';
+  src: url('../fonts/SKURRI.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FrizQuadrata';
+  src: url('../fonts/FRIZQT__.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.text-shadow-wow {
+text-shadow:
+  -1px -1px 0 #000,
+   1px -1px 0 #000,
+  -1px  1px 0 #000,
+   1px  1px 0 #000,
+  -2px -2px 0 #000,
+   2px -2px 0 #000,
+  -2px  2px 0 #000,
+   2px  2px 0 #000,
+   0px  0px 6px #000;
+}
+
+.text-shadow-wow-small {
+    text-shadow: 3px 1px 1px #000000;
+}
+
+.ArialN {
+  font-family: 'ArialN';
+}
+
+.Skurri {
+  font-family: 'Skurri';
+}
+
+.FrizQuadrata {
+  font-family: 'FrizQuadrata';
+}
+
+.morpheus {
+  font-family: 'Morpheus';
+}
+
+.bg-dark-overlay {
+  background-color: rgba(32, 32, 32, 0.9);
+}
+
+.bg-body {
+    background: url('https://wow.zamimg.com/uploads/blog/images/52601-calculating-arena-points-in-burning-crusade-classic-anniversary.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
